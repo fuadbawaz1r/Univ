@@ -1,138 +1,176 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Formulir Pendaftaran Mahasiswa Baru</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="style2.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tugas 1 – Eksplorasi Grid System</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --dark: #2e3138; --accent: #7b8fa6; --muted: #8a9099;
+      --light: #eef0f3; --border: #d8dce3; --tr: .25s ease; --bg: #f2f4f7;
+    }
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--dark); }
+    .serif { font-family: 'Playfair Display', serif; }
+
+    /* Navbar */
+    .navbar { background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1030; }
+    .navbar-brand { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--dark) !important; letter-spacing: -.02em; }
+    .navbar-brand span { color: var(--accent); }
+    .nav-link { font-size: .875rem; font-weight: 500; color: var(--muted) !important; padding: .4rem .75rem !important; border-radius: 6px; transition: color var(--tr); }
+    .nav-link:hover, .nav-link.active { color: var(--dark) !important; background: var(--light); }
+    .navbar-toggler { border: 1px solid var(--border); }
+    .navbar-toggler:focus { box-shadow: none; outline: 2px solid var(--accent); }
+
+    /* Hero */
+    .hero { background: var(--light); padding: 5rem 1.5rem 4rem; text-align: center; border-bottom: 1px solid var(--border); }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; line-height: 1.2; letter-spacing: -.02em; }
+    .hero h1 em { color: var(--accent); }
+    .hero p { color: var(--muted); max-width: 480px; margin: 0 auto; line-height: 1.7; }
+
+    /* Cards section */
+    .cards-section { padding: 4rem 0 5rem; }
+    .section-label { font-size: .75rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+
+    /* Card */
+    .card { border: 1px solid var(--border); border-radius: 14px; height: 100%; display: flex; flex-direction: column; transition: transform var(--tr), box-shadow var(--tr); }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,.09); }
+    .card-img-wrapper { overflow: hidden; aspect-ratio: 16/9; }
+    .card-img-top { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+    .card:hover .card-img-top { transform: scale(1.04); }
+    .card-body { padding: 1.5rem; display: flex; flex-direction: column; flex: 1; }
+    .card-category { font-size: .7rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); }
+    .card-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; line-height: 1.4; }
+    .card-text { font-size: .875rem; color: var(--muted); line-height: 1.7; flex: 1; }
+    .card-footer-area { margin-top: auto; }
+
+    /* Button */
+    .btn-card { font-size: .8rem; font-weight: 500; color: var(--dark); background: transparent; border: 1px solid var(--dark); border-radius: 50px; padding: .45rem 1.25rem; cursor: pointer; transition: background var(--tr), color var(--tr); }
+    .btn-card:hover { background: var(--dark); color: #fff; }
+
+    /* Footer */
+    footer { background: var(--dark); color: rgba(255,255,255,.55); padding: 2rem 1rem; font-size: .8rem; }
+    footer a { color: rgba(255,255,255,.75); text-decoration: none; transition: color var(--tr); }
+    footer a:hover { color: var(--accent); }
+
+    @media (max-width: 767.98px) {
+      .hero { padding: 3.5rem 1rem 3rem; }
+      .cards-section { padding: 2.5rem 0 3.5rem; }
+    }
+  </style>
 </head>
 <body>
 
-  <div class="form-card">
-    <h4>📋 Formulir Pendaftaran Mahasiswa Baru</h4>
-
-    <!-- Alert Sukses (default: tersembunyi) -->
-    <div id="alertSukses" class="alert alert-success alert-dismissible fade show d-none" role="alert">
-      ✅ Data berhasil disimpan!
-      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">Studio<span>.</span>C</a>
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navMenu"
+              aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-2">
+          <li class="nav-item"><a class="nav-link active" href="#">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Portofolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Artikel</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Kontak</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-    <form id="formDaftar" novalidate>
-
-      <!-- Baris 2 kolom: Nama & NIM -->
-      <div class="row g-3 mb-3">
-        <div class="col-md-6">
-          <label class="form-label">Nama Lengkap</label>
-          <input type="text" id="nama" class="form-control" placeholder="Masukkan nama lengkap" required/>
-          <div class="valid-feedback">Nama valid.</div>
-          <div class="invalid-feedback">Nama tidak boleh kosong.</div>
-        </div>
-        <div class="col-md-6">
-          <label class="form-label">NIM</label>
-          <input type="text" id="nim" class="form-control" placeholder="Contoh: 2024010001" required pattern="\d{10}"/>
-          <div class="valid-feedback">NIM valid.</div>
-          <div class="invalid-feedback">NIM harus 10 digit angka.</div>
-        </div>
-      </div>
-
-      <!-- Email -->
-      <div class="mb-3">
-        <label class="form-label">Email</label>
-        <input type="email" id="email" class="form-control" placeholder="contoh@email.com"/>
-      </div>
-
-      <!-- Program Studi -->
-      <div class="mb-3">
-        <label class="form-label">Program Studi</label>
-        <select id="prodi" class="form-select">
-          <option value="" disabled selected>-- Pilih Program Studi --</option>
-          <option>Teknik Informatika</option>
-          <option>Sistem Informasi</option>
-          <option>Ilmu Komputer</option>
-          <option>Teknik Elektro</option>
-        </select>
-      </div>
-
-      <!-- Semester -->
-      <div class="mb-3">
-        <label class="form-label">Semester</label>
-        <select id="semester" class="form-select">
-          <option value="" disabled selected>-- Pilih Semester --</option>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-          <option>6</option>
-          <option>7</option>
-          <option>8</option>
-        </select>
-      </div>
-
-      <!-- Alamat -->
-      <div class="mb-3">
-        <label class="form-label">Alamat</label>
-        <textarea id="alamat" class="form-control" rows="3" placeholder="Masukkan alamat lengkap"></textarea>
-      </div>
-
-      <!-- Foto Profil -->
-      <div class="mb-4">
-        <label class="form-label">Foto Profil</label>
-        <input type="file" id="foto" class="form-control" accept="image/*"/>
-      </div>
-
-      <!-- Tombol Simpan & Reset -->
-      <div class="d-flex gap-2">
-        <button type="button" class="btn btn-primary" onclick="simpanData()">Simpan</button>
-        <button type="reset" class="btn btn-secondary" onclick="resetForm()">Reset</button>
-      </div>
-
-    </form>
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Artikel <em></em></h1>
   </div>
 
+  <!-- CARDS SECTION -->
+  <section class="cards-section">
+    <div class="container">
+      <p class="section-label">Koleksi Artikel</p>
+      <div class="row g-4 mt-2">
+
+        <!-- CARD 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card">
+            <div class="card-img-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80"
+                class="card-img-top"
+                alt="Arsitektur Modern">
+            </div>
+            <div class="card-body">
+              <p class="card-category">Arsitektur</p>
+              <h5 class="card-title">Harmoni Ruang dan Cahaya dalam Desain Kontemporer</h5>
+              <p class="card-text">
+                Bagaimana arsitek modern memanfaatkan cahaya alami sebagai elemen desain utama untuk menciptakan ruang yang hidup dan bernyawa.
+              </p>
+              <div class="card-footer-area">
+                <button class="btn btn-card">Baca Selengkapnya</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card">
+            <div class="card-img-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80"
+                class="card-img-top"
+                alt="Teknologi">
+            </div>
+            <div class="card-body">
+              <p class="card-category">Teknologi</p>
+              <h5 class="card-title">Front-End Modern: Lebih dari Sekadar Tampilan</h5>
+              <p class="card-text">
+                Perkembangan ekosistem front-end tidak hanya soal visual. Performa, aksesibilitas, dan pengalaman pengguna kini menjadi prioritas utama.
+              </p>
+              <div class="card-footer-area">
+                <button class="btn btn-card">Baca Selengkapnya</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card">
+            <div class="card-img-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600&q=80"
+                class="card-img-top"
+                alt="Alam">
+            </div>
+            <div class="card-body">
+              <p class="card-category">Lingkungan</p>
+              <h5 class="card-title">Desain Berkelanjutan untuk Generasi Mendatang</h5>
+              <p class="card-text">
+                Prinsip desain berkelanjutan mulai merambah dunia digital. Bagaimana website yang ramah lingkungan dirancang dari kode hingga warna?
+              </p>
+              <div class="card-footer-area">
+                <button class="btn btn-card">Baca Selengkapnya</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p class="text-center mb-0">&copy; 2026 Studio.C — Seluruh hak cipta dilindungi undang-undang.</p>
+    </div>
+  </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    function simpanData() {
-      const nama = document.getElementById('nama');
-      const nim  = document.getElementById('nim');
-
-      // Validasi Nama
-      if (nama.value.trim() === '') {
-        nama.classList.remove('is-valid');
-        nama.classList.add('is-invalid');
-      } else {
-        nama.classList.remove('is-invalid');
-        nama.classList.add('is-valid');
-      }
-
-      // Validasi NIM (10 digit angka)
-      const nimPattern = /^\d{10}$/;
-      if (!nimPattern.test(nim.value.trim())) {
-        nim.classList.remove('is-valid');
-        nim.classList.add('is-invalid');
-      } else {
-        nim.classList.remove('is-invalid');
-        nim.classList.add('is-valid');
-      }
-
-      // Tampilkan alert sukses hanya jika keduanya valid
-      const alert = document.getElementById('alertSukses');
-      if (nama.classList.contains('is-valid') && nim.classList.contains('is-valid')) {
-        alert.classList.remove('d-none');
-      } else {
-        alert.classList.add('d-none');
-      }
-    }
-
-    function resetForm() {
-      // Hapus semua class validasi saat reset
-      document.querySelectorAll('.is-valid, .is-invalid').forEach(el => {
-        el.classList.remove('is-valid', 'is-invalid');
-      });
-      document.getElementById('alertSukses').classList.add('d-none');
-    }
-  </script>
-
 </body>
 </html>
