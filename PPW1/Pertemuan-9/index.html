@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fuad Bawazir</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet" />
+
+  <!-- CSS custom buatan sendiri -->
+  <link rel="stylesheet" href="D:\Download\website-portofolio-fuad\assets\style.css" />
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav id="mainNav" class="navbar navbar-expand-md fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#hero">Fuad Bawazir</a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-md-center gap-md-3 gap-2 py-3 py-md-0">
+        <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Proyek</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Pengalaman</a></li>
+        <li class="nav-item">
+          <a class="btn-collab ms-md-2" href="#contact">Mari Berkolaborasi</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section id="hero">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <!-- Left: Text -->
+      <div class="col-lg-6">
+        <h1 class="hero-title mb-3">
+          Hi&#128075;, Saya <strong>Fuad</strong><br />
+          <em>mahasiswa Software Engineering UGM</em>
+        </h1>
+        <p class="hero-description mb-4">
+          Saya membangun pemetaan teknis dari dasar dan bertumbuh dalam sistem yang tertata
+          &mdash; dengan logika baku, ketelitian, dan hasil yang nyata.
+        </p>
+        <div class="d-flex gap-5 mb-5">
+          <div><div class="stat-num">1+</div><div class="stat-label">Tahun</div></div>
+          <div><div class="stat-num">5+</div><div class="stat-label">Proyek</div></div>
+          <div><div class="stat-num">1+</div><div class="stat-label">Klien</div></div>
+        </div>
+        <a href="#about" class="btn-primary-solid">More Info &rarr;</a>
+      </div>
+
+      <!-- Right: Photo circular -->
+      <div class="col-lg-6">
+        <div class="hero-photo-wrap">
+          <img class="hero-photo-img" src="assets/fuadphoto.JPG" alt="Fuad Bawazir" />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects" class="py-section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="section-eyebrow mb-2">Portfolio</div>
+      <h2 class="mb-3">Proyek Terpilih</h2>
+      <p class="section-description mx-auto">
+        Berikut adalah beberapa proyek yang telah saya kerjakan,
+        menunjukkan kemampuan dalam pengembangan aplikasi web modern.
+      </p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card h-100">
+          <div class="project-img-wrap">
+            <img src="https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80" alt="E-Commerce Platform" />
+            <div class="project-overlay"></div>
+          </div>
+          <div class="p-4">
+            <h5 class="mb-2">E-Commerce Platform</h5>
+            <p class="project-description line-clamp-3 mb-3">
+              Platform e-commerce lengkap dengan sistem pembayaran, manajemen produk, dan dashboard admin.
+            </p>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="tag-pill">React</span><span class="tag-pill">Node.js</span><span class="tag-pill">MongoDB</span>
+            </div>
+            <div class="d-flex gap-3">
+              <a href="#" class="project-link"><i class="bi bi-box-arrow-up-right"></i> Demo</a>
+              <a href="#" class="project-link"><i class="bi bi-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card h-100">
+          <div class="project-img-wrap">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80" alt="Task Management App" />
+            <div class="project-overlay"></div>
+          </div>
+          <div class="p-4">
+            <h5 class="mb-2">Task Management App</h5>
+            <p class="project-description line-clamp-3 mb-3">
+              Aplikasi manajemen tugas dengan fitur kolaborasi tim, tracking progress, dan notifikasi real-time.
+            </p>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="tag-pill">TypeScript</span><span class="tag-pill">Express</span><span class="tag-pill">PostgreSQL</span>
+            </div>
+            <div class="d-flex gap-3">
+              <a href="#" class="project-link"><i class="bi bi-box-arrow-up-right"></i> Demo</a>
+              <a href="#" class="project-link"><i class="bi bi-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card h-100">
+          <div class="project-img-wrap">
+            <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&q=80" alt="Learning Management System" />
+            <div class="project-overlay"></div>
+          </div>
+          <div class="p-4">
+            <h5 class="mb-2">Learning Management System</h5>
+            <p class="project-description line-clamp-3 mb-3">
+              Platform pembelajaran online dengan fitur video streaming, quiz interaktif, dan sertifikasi.
+            </p>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="tag-pill">React</span><span class="tag-pill">Firebase</span><span class="tag-pill">Tailwind</span>
+            </div>
+            <div class="d-flex gap-3">
+              <a href="#" class="project-link"><i class="bi bi-box-arrow-up-right"></i> Demo</a>
+              <a href="#" class="project-link"><i class="bi bi-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXPERIENCE ===== -->
+<section id="experience" class="py-section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="section-eyebrow mb-2">Pengalaman &amp; Catatan</div>
+      <h2 class="experience-title mx-auto">
+        Sekilas tentang pencapaian yang membentuk perjalanan ini.
+      </h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="exp-card">
+          <div class="d-flex justify-content-between align-items-start mb-3">
+            <div class="exp-icon"><i class="bi bi-trophy"></i></div>
+            <div class="exp-year"><i class="bi bi-calendar3 me-1"></i>2025</div>
+          </div>
+          <h6 class="mb-1">FK VCG (Nominasi)</h6>
+          <p class="experience-description mb-0">Nominasi dalam kompetisi Video Game Development 2024</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="exp-card">
+          <div class="d-flex justify-content-between align-items-start mb-3">
+            <div class="exp-icon"><i class="bi bi-trophy"></i></div>
+            <div class="exp-year"><i class="bi bi-calendar3 me-1"></i>2026</div>
+          </div>
+          <h6 class="mb-1">Hackathon Winner</h6>
+          <p class="experience-description mb-0">Juara 1 dalam kompetisi pengembangan aplikasi mobile</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="exp-card">
+          <div class="d-flex justify-content-between align-items-start mb-3">
+            <div class="exp-icon"><i class="bi bi-trophy"></i></div>
+            <div class="exp-year"><i class="bi bi-calendar3 me-1"></i>2026</div>
+          </div>
+          <h6 class="mb-1">Best UI/UX Design</h6>
+          <p class="experience-description mb-0">Penghargaan desain terbaik dalam kompetisi nasional</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="py-section">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5 order-2 order-lg-1">
+        <div class="about-photo-wrap">
+            <img src="D:\Download\website-portofolio-fuad\assets\IMG_0144.jpg" class="about-photo" />
+        </div>
+
+        <div class="location-badge">&#127987;&#65039; Yogyakarta, Indonesia</div>
+      </div>
+      <div class="col-lg-7 order-1 order-lg-2">
+        <div class="section-eyebrow mb-2">Tentang Saya</div>
+        <h2 class="mb-2">Fuad Bawazir</h2>
+        <p class="about-subtitle mb-4">Mahasiswa Software Engineering di Universitas Gadjah Mada</p>
+        <p class="about-text mb-3">
+          Saya adalah mahasiswa <strong>Software Engineering</strong> semester 2 di
+          <strong>Universitas Gadjah Mada</strong>. Fokus belajar saya adalah pada pengembangan
+          aplikasi web modern, mobile apps, dan sistem manajemen database.
+        </p>
+        <p class="about-text-muted mb-4">
+          Saya tertarik untuk mengembangkan solusi digital yang dapat memberikan dampak positif
+          dan membantu menyelesaikan permasalahan nyata di masyarakat.
+        </p>
+        <h5 class="mb-3">Keahlian Teknis</h5>
+        <div class="d-flex flex-wrap gap-2">
+          <span class="skill-chip">Software Engineering</span>
+          <span class="skill-chip">React &amp; TypeScript</span>
+          <span class="skill-chip">Node.js &amp; Express</span>
+          <span class="skill-chip">Database Design</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="py-section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="badge-pill mb-3 d-inline-block">&#128206; Hubungi Saya</span>
+      <h2 class="mb-3">Mari tetap terhubung</h2>
+      <p class="section-description mx-auto">
+        Tertarik untuk berkolaborasi atau sekadar ingin berdiskusi tentang teknologi?
+        Jangan ragu untuk menghubungi saya melalui email atau media sosial.
+      </p>
+    </div>
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-7">
+        <div class="contact-card">
+          <label class="mb-2 d-block" for="emailInput">Email Address</label>
+          <div class="d-flex flex-column flex-sm-row gap-3">
+            <input type="email" id="emailInput" class="contact-input" placeholder="nama@email.com" />
+            <button class="btn-primary-solid flex-shrink-0" onclick="handleSubscribe()">Subscribe &rarr;</button>
+          </div>
+          <p id="successMsg" class="success-message mt-2 mb-0">&#10003; Terima kasih! Email Anda telah terdaftar.</p>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center gap-3">
+      <a href="mailto:fuad@example.com" class="social-btn" aria-label="Email"><i class="bi bi-envelope"></i></a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/fuadbawaz1r" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub"><i class="bi bi-github"></i></a>
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="py-5">
+  <div class="container">
+    <div class="row g-4 mb-4">
+      <div class="col-md-6">
+        <h5 class="footer-title mb-2">Fuad Bawazir</h5>
+        <p class="footer-description mb-0">
+          Software Engineering Student<br />Building digital solutions with passion
+        </p>
+      </div>
+      <div class="col-md-3">
+        <h6 class="footer-heading mb-3">Navigasi</h6>
+        <ul class="footer-list list-unstyled mb-0">
+          <li class="mb-2"><button onclick="scrollTo('about')">Tentang</button></li>
+          <li class="mb-2"><button onclick="scrollTo('projects')">Proyek</button></li>
+          <li class="mb-2"><button onclick="scrollTo('experience')">Pengalaman</button></li>
+          <li><button onclick="scrollTo('contact')">Kontak</button></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6 class="footer-heading mb-3">Sosial Media</h6>
+        <ul class="footer-list list-unstyled mb-0">
+          <li class="mb-2"><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li class="mb-2"><a href="https://github.com/fuadbawaz1r" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="footer-line" />
+    <p class="copyright mb-0">
+      &copy; <span id="footerYear"></span> Fuad Bawazir. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.getElementById('footerYear').textContent = new Date().getFullYear();
+
+  function handleSubscribe() {
+    const input = document.getElementById('emailInput');
+    const msg = document.getElementById('successMsg');
+    if (input.value && input.validity.valid) {
+      msg.style.display = 'block';
+      setTimeout(() => { msg.style.display = 'none'; input.value = ''; }, 3000);
+    } else {
+      input.focus();
+    }
+  }
+
+  function scrollTo(id) {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>
