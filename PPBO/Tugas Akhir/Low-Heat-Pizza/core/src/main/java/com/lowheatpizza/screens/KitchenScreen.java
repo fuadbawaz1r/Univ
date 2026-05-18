@@ -64,8 +64,8 @@ public class KitchenScreen extends BaseScreen implements KitchenController.View 
 
     private void buildScene() {
         addBackground();
-        addPrepAreas();
         addStations();
+        addPrepAreas();
         addHud();
         addOrderTicket();
         addWarning();
@@ -200,10 +200,17 @@ public class KitchenScreen extends BaseScreen implements KitchenController.View 
 
         Label orderLabel = buildLabel(game.getSession().getCurrentOrder().getOrderText(), "dark");
         orderLabel.setFontScale(1.35f);
-        orderLabel.setWrap(true);
-        ticket.add(orderLabel).width(500);
+        orderLabel.setWrap(false);
+        ticket.add(orderLabel);
 
-        ticket.setBounds(720f, 850f, 760f, 100f);
+        float width = ticket.getPrefWidth();
+        float height = ticket.getPrefHeight();
+        
+        // Perfectly centered horizontally on screen, and vertically centered in the 107px gap between HUD (950f) and stations (843f)
+        float x = 960f - width / 2f;
+        float y = 896.5f - height / 2f;
+        
+        ticket.setBounds(x, y, width, height);
         uiStage.addActor(ticket);
     }
 

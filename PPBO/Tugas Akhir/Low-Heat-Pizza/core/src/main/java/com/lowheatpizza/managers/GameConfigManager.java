@@ -29,7 +29,13 @@ public class GameConfigManager {
     }
 
     public int getExpToNextLevel(int level) {
-        return EXP_PER_LEVEL;
+        if (level == 1 || level == 2) {
+            return 30;
+        } else if (level == 3 || level == 4) {
+            return 50;
+        } else {
+            return 60;
+        }
     }
 
     public Array<ToppingConfig> getToppings() {

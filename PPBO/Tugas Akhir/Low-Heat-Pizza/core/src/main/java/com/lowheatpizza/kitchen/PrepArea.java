@@ -40,6 +40,7 @@ public class PrepArea extends Actor {
                     return false;
                 }
                 dragging = true;
+                toFront();
                 startX = x;
                 startY = y;
                 dragX = 0f;
@@ -150,11 +151,46 @@ public class PrepArea extends Actor {
             }
             Texture texture = game.getAssets().getTexture(ingredient.toppingAsset);
             int count = Math.min(pepperoniPositions.size, 6);
-            for (int index = 0; index < count; index++) {
-                Vector2 slot = pepperoniPositions.get(index);
-                float size = 48f;
-                float stagger = toppingTypeIndex * 10f;
-                batch.draw(texture, centerX + slot.x + stagger - size / 2f, centerY + slot.y - stagger - size / 2f, size, size);
+            
+            // Calculate a unique rotation angle offset for each topping type to scatter them beautifully
+            float angleOffsetRad = (float) Math.toRadians(toppingTypeIndex * 60f);
+            float cos = (float) Math.cos(angleOffsetRad);
+            float sin = (float) Math.sin(angleOffsetRad);
+            
+            if ("mushroom".equals(toppingId) || "onion".equals(toppingId) || "fish".equals(toppingId)) {
+                for (int index = 0; index < count; index++) {
+                    Vector2 slot = pepperoniPositions.get(index);
+                    
+                    // Rotate the base coordinates
+                    float rx = slot.x * cos - slot.y * sin;
+                    float ry = slot.x * sin + slot.y * cos;
+                    
+                    float size = 48f;
+                    
+                    // Draw 1st slice
+                    batch.draw(texture, centerX + rx - size / 2f, centerY + ry - size / 2f, size, size);
+                    
+                    // Draw 2nd slice (offset 1)
+                    float off1X = rx * 0.5f - 25f;
+                    float off1Y = ry * 0.5f + 25f;
+                    batch.draw(texture, centerX + off1X - size / 2f, centerY + off1Y - size / 2f, size, size);
+                    
+                    // Draw 3rd slice (offset 2)
+                    float off2X = rx * 0.6f + 25f;
+                    float off2Y = ry * 0.6f - 25f;
+                    batch.draw(texture, centerX + off2X - size / 2f, centerY + off2Y - size / 2f, size, size);
+                }
+            } else {
+                for (int index = 0; index < count; index++) {
+                    Vector2 slot = pepperoniPositions.get(index);
+                    
+                    // Rotate the base coordinates
+                    float rx = slot.x * cos - slot.y * sin;
+                    float ry = slot.x * sin + slot.y * cos;
+                    
+                    float size = 48f;
+                    batch.draw(texture, centerX + rx - size / 2f, centerY + ry - size / 2f, size, size);
+                }
             }
             toppingTypeIndex++;
         }

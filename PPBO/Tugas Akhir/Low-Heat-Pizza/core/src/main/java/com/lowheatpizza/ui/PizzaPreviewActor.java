@@ -50,7 +50,8 @@ public class PizzaPreviewActor extends Actor {
             }
 
             Texture texture = game.getAssets().getTexture(topping.getAssetPath());
-            for (int copies = 0; copies < 5; copies++) {
+            int numCopies = ("mushroom".equals(toppingId) || "onion".equals(toppingId) || "fish".equals(toppingId)) ? 12 : 5;
+            for (int copies = 0; copies < numCopies; copies++) {
                 Vector2 slot = toppingSlots.get(slotIndex % toppingSlots.size);
                 float size = 34f + (copies % 2) * 6f;
                 batch.draw(

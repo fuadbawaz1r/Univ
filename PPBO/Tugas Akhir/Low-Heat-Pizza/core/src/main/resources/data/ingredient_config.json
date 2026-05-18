@@ -45,21 +45,10 @@
       "toppingAsset": "images/toppings/onion.png"
     },
     {
-      "id": "basil",
-      "displayName": "Basil",
-      "type": "topping",
-      "unlockLevel": 5,
-      "price": 50,
-      "ownedByDefault": false,
-      "stationAsset": "images/kitchen/padlock.png",
-      "lockedAsset": "images/kitchen/padlock.png",
-      "toppingAsset": "images/toppings/bell_pepper.png"
-    },
-    {
       "id": "fish",
       "displayName": "Fish",
       "type": "topping",
-      "unlockLevel": 6,
+      "unlockLevel": 5,
       "price": 60,
       "ownedByDefault": false,
       "stationAsset": "images/kitchen/station_fish_locked.png",
