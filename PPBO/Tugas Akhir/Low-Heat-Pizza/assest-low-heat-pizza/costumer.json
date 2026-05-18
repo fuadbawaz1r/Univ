@@ -1,0 +1,1295 @@
+{
+  "version": 1,
+  "virtualResolution": {
+    "width": 1920,
+    "height": 1080
+  },
+  "customerRenderMode": "screen_ready_16_9",
+  "levelSystem": {
+    "startingLevel": 1,
+    "startingExp": 0,
+    "expToNextLevel": {
+      "1": 100,
+      "2": 150,
+      "3": 200,
+      "4": 250
+    }
+  },
+  "toppings": [
+    {
+      "id": "sauce",
+      "displayName": "Sauce",
+      "unlockLevel": 1,
+      "purchasePrice": 0,
+      "ownedByDefault": true
+    },
+    {
+      "id": "cheese",
+      "displayName": "Cheese",
+      "unlockLevel": 1,
+      "purchasePrice": 0,
+      "ownedByDefault": true
+    },
+    {
+      "id": "pepperoni",
+      "displayName": "Pepperoni",
+      "unlockLevel": 2,
+      "purchasePrice": 50,
+      "ownedByDefault": false
+    },
+    {
+      "id": "mushroom",
+      "displayName": "Mushroom",
+      "unlockLevel": 3,
+      "purchasePrice": 75,
+      "ownedByDefault": false
+    },
+    {
+      "id": "onion",
+      "displayName": "Onion",
+      "unlockLevel": 4,
+      "purchasePrice": 100,
+      "ownedByDefault": false
+    }
+  ],
+  "customers": [
+    {
+      "id": "customer_001",
+      "displayName": "Clara",
+      "texturePath": "C:\\Users\\fuadb\\Documents\\Codex\\loka-loka-pizza\\assest-low-heat-pizza\\Pelanggan\\pelanggan1.png",
+      "availableFromLevel": 1,
+      "orders": [
+        {
+          "id": "order_001_plain_sauce",
+          "availableFromLevel": 1,
+          "dialogue": "One pizza with sauce only, please.",
+          "clarificationDialogue": "Just sauce. No cheese and no extra toppings.",
+          "requiredToppings": [
+            "sauce"
+          ],
+          "reward": {
+            "money": 10,
+            "exp": 8
+          }
+        },
+        {
+          "id": "order_001_plain_cheese",
+          "availableFromLevel": 1,
+          "dialogue": "Can I get a cheese-only pizza?",
+          "clarificationDialogue": "Cheese only. Please do not add sauce.",
+          "requiredToppings": [
+            "cheese"
+          ],
+          "reward": {
+            "money": 10,
+            "exp": 8
+          }
+        },
+        {
+          "id": "order_001_classic",
+          "availableFromLevel": 1,
+          "dialogue": "I want a classic pizza with sauce and cheese.",
+          "clarificationDialogue": "Sauce and cheese, nothing else.",
+          "requiredToppings": [
+            "sauce",
+            "cheese"
+          ],
+          "reward": {
+            "money": 15,
+            "exp": 10
+          }
+        },
+        {
+          "id": "order_001_extra_simple",
+          "availableFromLevel": 1,
+          "dialogue": "Keep it simple for me: sauce and cheese.",
+          "clarificationDialogue": "A simple sauce-and-cheese pizza.",
+          "requiredToppings": [
+            "sauce",
+            "cheese"
+          ],
+          "reward": {
+            "money": 15,
+            "exp": 10
+          }
+        },
+        {
+          "id": "order_001_red_base",
+          "availableFromLevel": 1,
+          "dialogue": "Make me a red base pizza with cheese on top.",
+          "clarificationDialogue": "That means sauce first, then cheese.",
+          "requiredToppings": [
+            "sauce",
+            "cheese"
+          ],
+          "reward": {
+            "money": 15,
+            "exp": 10
+          }
+        },
+        {
+          "id": "order_001_pepperoni_classic",
+          "availableFromLevel": 2,
+          "dialogue": "Add pepperoni to a classic pizza.",
+          "clarificationDialogue": "Sauce, cheese, and pepperoni.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "pepperoni"
+          ],
+          "reward": {
+            "money": 25,
+            "exp": 18
+          }
+        },
+        {
+          "id": "order_001_pepperoni_no_sauce",
+          "availableFromLevel": 2,
+          "dialogue": "I want cheese and pepperoni, no sauce.",
+          "clarificationDialogue": "Cheese and pepperoni only.",
+          "requiredToppings": [
+            "cheese",
+            "pepperoni"
+          ],
+          "reward": {
+            "money": 15,
+            "exp": 10
+          }
+        },
+        {
+          "id": "order_001_saucy_pepperoni",
+          "availableFromLevel": 2,
+          "dialogue": "Give me sauce with pepperoni on it.",
+          "clarificationDialogue": "Sauce and pepperoni, without cheese.",
+          "requiredToppings": [
+            "sauce",
+            "pepperoni"
+          ],
+          "reward": {
+            "money": 15,
+            "exp": 10
+          }
+        },
+        {
+          "id": "order_001_mushroom_classic",
+          "availableFromLevel": 3,
+          "dialogue": "A mushroom pizza sounds good today.",
+          "clarificationDialogue": "Sauce, cheese, and mushroom.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "mushroom"
+          ],
+          "reward": {
+            "money": 25,
+            "exp": 18
+          }
+        },
+        {
+          "id": "order_001_mushroom_cheese",
+          "availableFromLevel": 3,
+          "dialogue": "Can you make cheese and mushroom only?",
+          "clarificationDialogue": "Cheese and mushroom. No sauce.",
+          "requiredToppings": [
+            "cheese",
+            "mushroom"
+          ],
+          "reward": {
+            "money": 15,
+            "exp": 10
+          }
+        },
+        {
+          "id": "order_001_pepperoni_mushroom",
+          "availableFromLevel": 3,
+          "dialogue": "I want pepperoni and mushroom together.",
+          "clarificationDialogue": "Sauce, cheese, pepperoni, and mushroom.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "pepperoni",
+            "mushroom"
+          ],
+          "reward": {
+            "money": 35,
+            "exp": 25
+          }
+        },
+        {
+          "id": "order_001_onion_classic",
+          "availableFromLevel": 4,
+          "dialogue": "Add onion to a regular pizza.",
+          "clarificationDialogue": "Sauce, cheese, and onion.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "onion"
+          ],
+          "reward": {
+            "money": 25,
+            "exp": 18
+          }
+        },
+        {
+          "id": "order_001_veggie_mix",
+          "availableFromLevel": 4,
+          "dialogue": "Make a veggie-style pizza for me.",
+          "clarificationDialogue": "Sauce, cheese, mushroom, and onion.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "mushroom",
+            "onion"
+          ],
+          "reward": {
+            "money": 35,
+            "exp": 25
+          }
+        },
+        {
+          "id": "order_001_loaded",
+          "availableFromLevel": 4,
+          "dialogue": "I want the loaded one with everything you have.",
+          "clarificationDialogue": "Sauce, cheese, pepperoni, mushroom, and onion.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "pepperoni",
+            "mushroom",
+            "onion"
+          ],
+          "reward": {
+            "money": 45,
+            "exp": 32
+          }
+        }
+      ]
+    },
+    {
+      "id": "customer_002",
+      "displayName": "Adam",
+      "texturePath": "C:\\Users\\fuadb\\Documents\\Codex\\loka-loka-pizza\\assest-low-heat-pizza\\Pelanggan\\pelanggan2.png",
+      "availableFromLevel": 1,
+      "orders": [
+        {
+          "id": "order_002_quick_sauce",
+          "availableFromLevel": 1,
+          "dialogue": "Sauce only. Make it quick.",
+          "clarificationDialogue": "Only sauce on the pizza.",
+          "requiredToppings": [
+            "sauce"
+          ],
+          "reward": {
+            "money": 10,
+            "exp": 8
+          }
+        },
+        {
+          "id": "order_002_quick_cheese",
+          "availableFromLevel": 1,
+          "dialogue": "Cheese only today.",
+          "clarificationDialogue": "Just cheese, no sauce.",
+          "requiredToppings": [
+            "cheese"
+          ],
+          "reward": {
+            "money": 10,
+            "exp": 8
+          }
+        },
+        {
+          "id": "order_002_quick_classic",
+          "availableFromLevel": 1,
+          "dialogue": "Sauce and cheese. That's all.",
+          "clarificationDialogue": "Sauce and cheese only.",
+          "requiredToppings": [
+            "sauce",
+            "cheese"
+          ],
+          "reward": {
+            "money": 15,
+            "exp": 10
+          }
+        },
+        {
+          "id": "order_002_light_classic",
+          "availableFromLevel": 1,
+          "dialogue": "I need a light pizza with sauce and cheese.",
+          "clarificationDialogue": "Sauce and cheese, no other toppings.",
+          "requiredToppings": [
+            "sauce",
+            "cheese"
+          ],
+          "reward": {
+            "money": 15,
+            "exp": 10
+          }
+        },
+        {
+          "id": "order_002_pepperoni_direct",
+          "availableFromLevel": 2,
+          "dialogue": "Put pepperoni on my pizza.",
+          "clarificationDialogue": "Sauce, cheese, and pepperoni.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "pepperoni"
+          ],
+          "reward": {
+            "money": 25,
+            "exp": 18
+          }
+        },
+        {
+          "id": "order_002_pepperoni_cheese",
+          "availableFromLevel": 2,
+          "dialogue": "Cheese and pepperoni only.",
+          "clarificationDialogue": "No sauce. Just cheese and pepperoni.",
+          "requiredToppings": [
+            "cheese",
+            "pepperoni"
+          ],
+          "reward": {
+            "money": 15,
+            "exp": 10
+          }
+        },
+        {
+          "id": "order_002_red_pepperoni",
+          "availableFromLevel": 2,
+          "dialogue": "I want sauce and pepperoni without cheese.",
+          "clarificationDialogue": "Sauce and pepperoni only.",
+          "requiredToppings": [
+            "sauce",
+            "pepperoni"
+          ],
+          "reward": {
+            "money": 15,
+            "exp": 10
+          }
+        },
+        {
+          "id": "order_002_double_topping_pep",
+          "availableFromLevel": 2,
+          "dialogue": "Give me the regular pizza plus pepperoni.",
+          "clarificationDialogue": "Regular means sauce and cheese, plus pepperoni.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "pepperoni"
+          ],
+          "reward": {
+            "money": 25,
+            "exp": 18
+          }
+        },
+        {
+          "id": "order_002_mushroom_only",
+          "availableFromLevel": 3,
+          "dialogue": "Mushroom only, please.",
+          "clarificationDialogue": "Only mushroom on the pizza.",
+          "requiredToppings": [
+            "mushroom"
+          ],
+          "reward": {
+            "money": 10,
+            "exp": 8
+          }
+        },
+        {
+          "id": "order_002_mushroom_classic",
+          "availableFromLevel": 3,
+          "dialogue": "I want a mushroom pizza with the normal base.",
+          "clarificationDialogue": "Normal base means sauce and cheese, then mushroom.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "mushroom"
+          ],
+          "reward": {
+            "money": 25,
+            "exp": 18
+          }
+        },
+        {
+          "id": "order_002_mushroom_pepperoni_no_cheese",
+          "availableFromLevel": 3,
+          "dialogue": "Sauce, pepperoni, and mushroom. Skip the cheese.",
+          "clarificationDialogue": "Sauce, pepperoni, and mushroom only.",
+          "requiredToppings": [
+            "sauce",
+            "pepperoni",
+            "mushroom"
+          ],
+          "reward": {
+            "money": 25,
+            "exp": 18
+          }
+        },
+        {
+          "id": "order_002_onion_plain",
+          "availableFromLevel": 4,
+          "dialogue": "Onion and cheese, please.",
+          "clarificationDialogue": "Cheese and onion only.",
+          "requiredToppings": [
+            "cheese",
+            "onion"
+          ],
+          "reward": {
+            "money": 15,
+            "exp": 10
+          }
+        },
+        {
+          "id": "order_002_onion_mushroom",
+          "availableFromLevel": 4,
+          "dialogue": "I want mushroom and onion together.",
+          "clarificationDialogue": "Sauce, cheese, mushroom, and onion.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "mushroom",
+            "onion"
+          ],
+          "reward": {
+            "money": 35,
+            "exp": 25
+          }
+        },
+        {
+          "id": "order_002_max_mix",
+          "availableFromLevel": 4,
+          "dialogue": "Make the biggest mix you can make.",
+          "clarificationDialogue": "Use sauce, cheese, pepperoni, mushroom, and onion.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "pepperoni",
+            "mushroom",
+            "onion"
+          ],
+          "reward": {
+            "money": 45,
+            "exp": 32
+          }
+        }
+      ]
+    },
+    {
+      "id": "customer_003",
+      "displayName": "Jeje",
+      "texturePath": "C:\\Users\\fuadb\\Documents\\Codex\\loka-loka-pizza\\assest-low-heat-pizza\\Pelanggan\\pelanggan3.png",
+      "availableFromLevel": 1,
+      "orders": [
+        {
+          "id": "order_003_no_cheese_sauce",
+          "availableFromLevel": 1,
+          "dialogue": "No cheese for me. Sauce only.",
+          "clarificationDialogue": "Only sauce. Do not add cheese.",
+          "requiredToppings": [
+            "sauce"
+          ],
+          "reward": {
+            "money": 10,
+            "exp": 8
+          }
+        },
+        {
+          "id": "order_003_no_sauce_cheese",
+          "availableFromLevel": 1,
+          "dialogue": "No sauce today. Just cheese.",
+          "clarificationDialogue": "Cheese only.",
+          "requiredToppings": [
+            "cheese"
+          ],
+          "reward": {
+            "money": 10,
+            "exp": 8
+          }
+        },
+        {
+          "id": "order_003_balanced",
+          "availableFromLevel": 1,
+          "dialogue": "Make it balanced: sauce and cheese.",
+          "clarificationDialogue": "Sauce and cheese only.",
+          "requiredToppings": [
+            "sauce",
+            "cheese"
+          ],
+          "reward": {
+            "money": 15,
+            "exp": 10
+          }
+        },
+        {
+          "id": "order_003_soft_flavor",
+          "availableFromLevel": 1,
+          "dialogue": "I want something soft and simple.",
+          "clarificationDialogue": "Sauce and cheese. No extra toppings.",
+          "requiredToppings": [
+            "sauce",
+            "cheese"
+          ],
+          "reward": {
+            "money": 15,
+            "exp": 10
+          }
+        },
+        {
+          "id": "order_003_pepperoni_no_cheese",
+          "availableFromLevel": 2,
+          "dialogue": "Pepperoni with sauce, but no cheese.",
+          "clarificationDialogue": "Sauce and pepperoni only.",
+          "requiredToppings": [
+            "sauce",
+            "pepperoni"
+          ],
+          "reward": {
+            "money": 15,
+            "exp": 10
+          }
+        },
+        {
+          "id": "order_003_pepperoni_regular",
+          "availableFromLevel": 2,
+          "dialogue": "A normal pepperoni pizza, please.",
+          "clarificationDialogue": "Sauce, cheese, and pepperoni.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "pepperoni"
+          ],
+          "reward": {
+            "money": 25,
+            "exp": 18
+          }
+        },
+        {
+          "id": "order_003_cheesy_pepperoni",
+          "availableFromLevel": 2,
+          "dialogue": "I want cheese with pepperoni, no red sauce.",
+          "clarificationDialogue": "Cheese and pepperoni only.",
+          "requiredToppings": [
+            "cheese",
+            "pepperoni"
+          ],
+          "reward": {
+            "money": 15,
+            "exp": 10
+          }
+        },
+        {
+          "id": "order_003_mushroom_clean",
+          "availableFromLevel": 3,
+          "dialogue": "Mushroom with cheese, no sauce.",
+          "clarificationDialogue": "Cheese and mushroom only.",
+          "requiredToppings": [
+            "cheese",
+            "mushroom"
+          ],
+          "reward": {
+            "money": 15,
+            "exp": 10
+          }
+        },
+        {
+          "id": "order_003_mushroom_red",
+          "availableFromLevel": 3,
+          "dialogue": "Mushroom on a saucy pizza, please.",
+          "clarificationDialogue": "Sauce and mushroom only.",
+          "requiredToppings": [
+            "sauce",
+            "mushroom"
+          ],
+          "reward": {
+            "money": 15,
+            "exp": 10
+          }
+        },
+        {
+          "id": "order_003_mushroom_full_base",
+          "availableFromLevel": 3,
+          "dialogue": "Give me mushroom on the regular base.",
+          "clarificationDialogue": "Sauce, cheese, and mushroom.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "mushroom"
+          ],
+          "reward": {
+            "money": 25,
+            "exp": 18
+          }
+        },
+        {
+          "id": "order_003_onion_no_cheese",
+          "availableFromLevel": 4,
+          "dialogue": "Onion with sauce, no cheese.",
+          "clarificationDialogue": "Sauce and onion only.",
+          "requiredToppings": [
+            "sauce",
+            "onion"
+          ],
+          "reward": {
+            "money": 15,
+            "exp": 10
+          }
+        },
+        {
+          "id": "order_003_onion_mushroom_light",
+          "availableFromLevel": 4,
+          "dialogue": "Make it mushroom and onion, but skip pepperoni.",
+          "clarificationDialogue": "Sauce, cheese, mushroom, and onion.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "mushroom",
+            "onion"
+          ],
+          "reward": {
+            "money": 35,
+            "exp": 25
+          }
+        },
+        {
+          "id": "order_003_everything_but_no_note",
+          "availableFromLevel": 4,
+          "dialogue": "Give me the full set of toppings.",
+          "clarificationDialogue": "Sauce, cheese, pepperoni, mushroom, and onion.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "pepperoni",
+            "mushroom",
+            "onion"
+          ],
+          "reward": {
+            "money": 45,
+            "exp": 32
+          }
+        }
+      ]
+    },
+    {
+      "id": "customer_004",
+      "displayName": "Bahlil",
+      "texturePath": "C:\\Users\\fuadb\\Documents\\Codex\\loka-loka-pizza\\assest-low-heat-pizza\\Pelanggan\\pelanggan4.png",
+      "availableFromLevel": 2,
+      "orders": [
+        {
+          "id": "order_004_classic_l2",
+          "availableFromLevel": 2,
+          "dialogue": "I want a simple pizza with sauce and cheese.",
+          "clarificationDialogue": "Sauce and cheese only.",
+          "requiredToppings": [
+            "sauce",
+            "cheese"
+          ],
+          "reward": {
+            "money": 15,
+            "exp": 10
+          }
+        },
+        {
+          "id": "order_004_pepperoni_l2",
+          "availableFromLevel": 2,
+          "dialogue": "Add pepperoni to my pizza.",
+          "clarificationDialogue": "Sauce, cheese, and pepperoni.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "pepperoni"
+          ],
+          "reward": {
+            "money": 25,
+            "exp": 18
+          }
+        },
+        {
+          "id": "order_004_pepperoni_cheese_l2",
+          "availableFromLevel": 2,
+          "dialogue": "Cheese and pepperoni. No sauce.",
+          "clarificationDialogue": "Cheese and pepperoni only.",
+          "requiredToppings": [
+            "cheese",
+            "pepperoni"
+          ],
+          "reward": {
+            "money": 15,
+            "exp": 10
+          }
+        },
+        {
+          "id": "order_004_pepperoni_red_l2",
+          "availableFromLevel": 2,
+          "dialogue": "Sauce and pepperoni, no cheese.",
+          "clarificationDialogue": "Sauce and pepperoni only.",
+          "requiredToppings": [
+            "sauce",
+            "pepperoni"
+          ],
+          "reward": {
+            "money": 15,
+            "exp": 10
+          }
+        },
+        {
+          "id": "order_004_classic_repeat_l2",
+          "availableFromLevel": 2,
+          "dialogue": "Nothing fancy. Just the basic one.",
+          "clarificationDialogue": "Basic means sauce and cheese.",
+          "requiredToppings": [
+            "sauce",
+            "cheese"
+          ],
+          "reward": {
+            "money": 15,
+            "exp": 10
+          }
+        },
+        {
+          "id": "order_004_mushroom_basic",
+          "availableFromLevel": 3,
+          "dialogue": "I want mushroom on the basic pizza.",
+          "clarificationDialogue": "Sauce, cheese, and mushroom.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "mushroom"
+          ],
+          "reward": {
+            "money": 25,
+            "exp": 18
+          }
+        },
+        {
+          "id": "order_004_mushroom_pepperoni",
+          "availableFromLevel": 3,
+          "dialogue": "Give me mushroom and pepperoni together.",
+          "clarificationDialogue": "Sauce, cheese, mushroom, and pepperoni.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "mushroom",
+            "pepperoni"
+          ],
+          "reward": {
+            "money": 35,
+            "exp": 25
+          }
+        },
+        {
+          "id": "order_004_mushroom_no_sauce",
+          "availableFromLevel": 3,
+          "dialogue": "Cheese, mushroom, and pepperoni. No sauce.",
+          "clarificationDialogue": "Cheese, mushroom, and pepperoni only.",
+          "requiredToppings": [
+            "cheese",
+            "mushroom",
+            "pepperoni"
+          ],
+          "reward": {
+            "money": 25,
+            "exp": 18
+          }
+        },
+        {
+          "id": "order_004_mushroom_sauce_only",
+          "availableFromLevel": 3,
+          "dialogue": "Sauce and mushroom only.",
+          "clarificationDialogue": "Only sauce and mushroom.",
+          "requiredToppings": [
+            "sauce",
+            "mushroom"
+          ],
+          "reward": {
+            "money": 15,
+            "exp": 10
+          }
+        },
+        {
+          "id": "order_004_onion_basic",
+          "availableFromLevel": 4,
+          "dialogue": "Add onion to the basic pizza.",
+          "clarificationDialogue": "Sauce, cheese, and onion.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "onion"
+          ],
+          "reward": {
+            "money": 25,
+            "exp": 18
+          }
+        },
+        {
+          "id": "order_004_onion_pepperoni",
+          "availableFromLevel": 4,
+          "dialogue": "Onion and pepperoni with the normal base.",
+          "clarificationDialogue": "Sauce, cheese, onion, and pepperoni.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "onion",
+            "pepperoni"
+          ],
+          "reward": {
+            "money": 35,
+            "exp": 25
+          }
+        },
+        {
+          "id": "order_004_onion_mushroom_no_pepperoni",
+          "availableFromLevel": 4,
+          "dialogue": "I want mushroom and onion, but no pepperoni.",
+          "clarificationDialogue": "Sauce, cheese, mushroom, and onion.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "mushroom",
+            "onion"
+          ],
+          "reward": {
+            "money": 35,
+            "exp": 25
+          }
+        },
+        {
+          "id": "order_004_onion_mushroom_pepperoni",
+          "availableFromLevel": 4,
+          "dialogue": "Mushroom, onion, and pepperoni. Make it complete.",
+          "clarificationDialogue": "Sauce, cheese, mushroom, onion, and pepperoni.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "mushroom",
+            "onion",
+            "pepperoni"
+          ],
+          "reward": {
+            "money": 45,
+            "exp": 32
+          }
+        },
+        {
+          "id": "order_004_onion_light",
+          "availableFromLevel": 4,
+          "dialogue": "Just onion and cheese.",
+          "clarificationDialogue": "Cheese and onion only.",
+          "requiredToppings": [
+            "cheese",
+            "onion"
+          ],
+          "reward": {
+            "money": 15,
+            "exp": 10
+          }
+        }
+      ]
+    },
+    {
+      "id": "customer_005",
+      "displayName": "Jason",
+      "texturePath": "C:\\Users\\fuadb\\Documents\\Codex\\loka-loka-pizza\\assest-low-heat-pizza\\Pelanggan\\pelanggan5.png",
+      "availableFromLevel": 1,
+      "orders": [
+        {
+          "id": "order_005_cheese_only",
+          "availableFromLevel": 1,
+          "dialogue": "Cheese only, please.",
+          "clarificationDialogue": "Just cheese. No sauce.",
+          "requiredToppings": [
+            "cheese"
+          ],
+          "reward": {
+            "money": 10,
+            "exp": 8
+          }
+        },
+        {
+          "id": "order_005_sauce_only",
+          "availableFromLevel": 1,
+          "dialogue": "Sauce only for me.",
+          "clarificationDialogue": "Only sauce.",
+          "requiredToppings": [
+            "sauce"
+          ],
+          "reward": {
+            "money": 10,
+            "exp": 8
+          }
+        },
+        {
+          "id": "order_005_classic",
+          "availableFromLevel": 1,
+          "dialogue": "I'll take sauce and cheese.",
+          "clarificationDialogue": "Sauce and cheese only.",
+          "requiredToppings": [
+            "sauce",
+            "cheese"
+          ],
+          "reward": {
+            "money": 15,
+            "exp": 10
+          }
+        },
+        {
+          "id": "order_005_cheese_base",
+          "availableFromLevel": 1,
+          "dialogue": "Make it cheesy but still normal.",
+          "clarificationDialogue": "Normal means sauce and cheese.",
+          "requiredToppings": [
+            "sauce",
+            "cheese"
+          ],
+          "reward": {
+            "money": 15,
+            "exp": 10
+          }
+        },
+        {
+          "id": "order_005_pepperoni_cheesy",
+          "availableFromLevel": 2,
+          "dialogue": "Make it cheesy with pepperoni.",
+          "clarificationDialogue": "Cheese and pepperoni. No sauce.",
+          "requiredToppings": [
+            "cheese",
+            "pepperoni"
+          ],
+          "reward": {
+            "money": 15,
+            "exp": 10
+          }
+        },
+        {
+          "id": "order_005_pepperoni_classic",
+          "availableFromLevel": 2,
+          "dialogue": "A classic pepperoni pizza, please.",
+          "clarificationDialogue": "Sauce, cheese, and pepperoni.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "pepperoni"
+          ],
+          "reward": {
+            "money": 25,
+            "exp": 18
+          }
+        },
+        {
+          "id": "order_005_pepperoni_red",
+          "availableFromLevel": 2,
+          "dialogue": "Sauce and pepperoni only.",
+          "clarificationDialogue": "No cheese. Sauce and pepperoni.",
+          "requiredToppings": [
+            "sauce",
+            "pepperoni"
+          ],
+          "reward": {
+            "money": 15,
+            "exp": 10
+          }
+        },
+        {
+          "id": "order_005_mushroom_cheesy",
+          "availableFromLevel": 3,
+          "dialogue": "Cheese and mushroom sounds good.",
+          "clarificationDialogue": "Cheese and mushroom only.",
+          "requiredToppings": [
+            "cheese",
+            "mushroom"
+          ],
+          "reward": {
+            "money": 15,
+            "exp": 10
+          }
+        },
+        {
+          "id": "order_005_mushroom_classic",
+          "availableFromLevel": 3,
+          "dialogue": "Mushroom on a classic pizza.",
+          "clarificationDialogue": "Sauce, cheese, and mushroom.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "mushroom"
+          ],
+          "reward": {
+            "money": 25,
+            "exp": 18
+          }
+        },
+        {
+          "id": "order_005_mushroom_pepperoni",
+          "availableFromLevel": 3,
+          "dialogue": "Mushroom and pepperoni, please.",
+          "clarificationDialogue": "Sauce, cheese, mushroom, and pepperoni.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "mushroom",
+            "pepperoni"
+          ],
+          "reward": {
+            "money": 35,
+            "exp": 25
+          }
+        },
+        {
+          "id": "order_005_onion_cheese",
+          "availableFromLevel": 4,
+          "dialogue": "Cheese and onion, no sauce.",
+          "clarificationDialogue": "Cheese and onion only.",
+          "requiredToppings": [
+            "cheese",
+            "onion"
+          ],
+          "reward": {
+            "money": 15,
+            "exp": 10
+          }
+        },
+        {
+          "id": "order_005_onion_classic",
+          "availableFromLevel": 4,
+          "dialogue": "Onion on the classic one.",
+          "clarificationDialogue": "Sauce, cheese, and onion.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "onion"
+          ],
+          "reward": {
+            "money": 25,
+            "exp": 18
+          }
+        },
+        {
+          "id": "order_005_veggie",
+          "availableFromLevel": 4,
+          "dialogue": "I want the veggie one.",
+          "clarificationDialogue": "Sauce, cheese, mushroom, and onion.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "mushroom",
+            "onion"
+          ],
+          "reward": {
+            "money": 35,
+            "exp": 25
+          }
+        },
+        {
+          "id": "order_005_everything",
+          "availableFromLevel": 4,
+          "dialogue": "Give me everything available.",
+          "clarificationDialogue": "Sauce, cheese, pepperoni, mushroom, and onion.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "pepperoni",
+            "mushroom",
+            "onion"
+          ],
+          "reward": {
+            "money": 45,
+            "exp": 32
+          }
+        }
+      ]
+    },
+    {
+      "id": "customer_006",
+      "displayName": "Abando",
+      "texturePath": "C:\\Users\\fuadb\\Documents\\Codex\\loka-loka-pizza\\assest-low-heat-pizza\\Pelanggan\\pelanggan6.png",
+      "availableFromLevel": 3,
+      "orders": [
+        {
+          "id": "order_006_mushroom_regular",
+          "availableFromLevel": 3,
+          "dialogue": "I want mushroom on a regular pizza.",
+          "clarificationDialogue": "Sauce, cheese, and mushroom.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "mushroom"
+          ],
+          "reward": {
+            "money": 25,
+            "exp": 18
+          }
+        },
+        {
+          "id": "order_006_mushroom_cheese",
+          "availableFromLevel": 3,
+          "dialogue": "Cheese and mushroom only.",
+          "clarificationDialogue": "No sauce. Cheese and mushroom.",
+          "requiredToppings": [
+            "cheese",
+            "mushroom"
+          ],
+          "reward": {
+            "money": 15,
+            "exp": 10
+          }
+        },
+        {
+          "id": "order_006_mushroom_sauce",
+          "availableFromLevel": 3,
+          "dialogue": "Sauce and mushroom only.",
+          "clarificationDialogue": "No cheese. Sauce and mushroom.",
+          "requiredToppings": [
+            "sauce",
+            "mushroom"
+          ],
+          "reward": {
+            "money": 15,
+            "exp": 10
+          }
+        },
+        {
+          "id": "order_006_pepperoni_mushroom",
+          "availableFromLevel": 3,
+          "dialogue": "Pepperoni and mushroom with the usual base.",
+          "clarificationDialogue": "Usual base means sauce and cheese, plus pepperoni and mushroom.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "pepperoni",
+            "mushroom"
+          ],
+          "reward": {
+            "money": 35,
+            "exp": 25
+          }
+        },
+        {
+          "id": "order_006_triple_no_sauce",
+          "availableFromLevel": 3,
+          "dialogue": "Cheese, pepperoni, and mushroom. No sauce.",
+          "clarificationDialogue": "Cheese, pepperoni, and mushroom only.",
+          "requiredToppings": [
+            "cheese",
+            "pepperoni",
+            "mushroom"
+          ],
+          "reward": {
+            "money": 25,
+            "exp": 18
+          }
+        },
+        {
+          "id": "order_006_onion_regular",
+          "availableFromLevel": 4,
+          "dialogue": "Onion on a regular pizza, please.",
+          "clarificationDialogue": "Sauce, cheese, and onion.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "onion"
+          ],
+          "reward": {
+            "money": 25,
+            "exp": 18
+          }
+        },
+        {
+          "id": "order_006_onion_mushroom",
+          "availableFromLevel": 4,
+          "dialogue": "Mushroom and onion with the regular base.",
+          "clarificationDialogue": "Sauce, cheese, mushroom, and onion.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "mushroom",
+            "onion"
+          ],
+          "reward": {
+            "money": 35,
+            "exp": 25
+          }
+        },
+        {
+          "id": "order_006_onion_pepperoni",
+          "availableFromLevel": 4,
+          "dialogue": "Onion and pepperoni with sauce and cheese.",
+          "clarificationDialogue": "Sauce, cheese, onion, and pepperoni.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "onion",
+            "pepperoni"
+          ],
+          "reward": {
+            "money": 35,
+            "exp": 25
+          }
+        },
+        {
+          "id": "order_006_onion_mushroom_no_cheese",
+          "availableFromLevel": 4,
+          "dialogue": "Sauce, mushroom, and onion. No cheese.",
+          "clarificationDialogue": "Sauce, mushroom, and onion only.",
+          "requiredToppings": [
+            "sauce",
+            "mushroom",
+            "onion"
+          ],
+          "reward": {
+            "money": 25,
+            "exp": 18
+          }
+        },
+        {
+          "id": "order_006_onion_cheese_mushroom",
+          "availableFromLevel": 4,
+          "dialogue": "Cheese, mushroom, and onion. Skip the sauce.",
+          "clarificationDialogue": "Cheese, mushroom, and onion only.",
+          "requiredToppings": [
+            "cheese",
+            "mushroom",
+            "onion"
+          ],
+          "reward": {
+            "money": 25,
+            "exp": 18
+          }
+        },
+        {
+          "id": "order_006_full_house",
+          "availableFromLevel": 4,
+          "dialogue": "I want the full house pizza.",
+          "clarificationDialogue": "Sauce, cheese, pepperoni, mushroom, and onion.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "pepperoni",
+            "mushroom",
+            "onion"
+          ],
+          "reward": {
+            "money": 45,
+            "exp": 32
+          }
+        },
+        {
+          "id": "order_006_no_meat_mix",
+          "availableFromLevel": 4,
+          "dialogue": "No pepperoni. Give me the rest.",
+          "clarificationDialogue": "Sauce, cheese, mushroom, and onion.",
+          "requiredToppings": [
+            "sauce",
+            "cheese",
+            "mushroom",
+            "onion"
+          ],
+          "reward": {
+            "money": 35,
+            "exp": 25
+          }
+        }
+      ]
+    }
+  ]
+}

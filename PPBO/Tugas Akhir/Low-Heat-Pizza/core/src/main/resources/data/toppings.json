@@ -1,0 +1,58 @@
+[
+  {
+    "id": "sauce",
+    "name": "Sauce",
+    "price": 0,
+    "requiredLevel": 1,
+    "initialStatus": "OWNED",
+    "assetPath": "images/kitchen/sauce_layer.png"
+  },
+  {
+    "id": "cheese",
+    "name": "Cheese",
+    "price": 0,
+    "requiredLevel": 1,
+    "initialStatus": "OWNED",
+    "assetPath": "images/kitchen/cheese_layer.png"
+  },
+  {
+    "id": "pepperoni",
+    "name": "Pepperoni",
+    "price": 50,
+    "requiredLevel": 2,
+    "initialStatus": "LOCKED",
+    "assetPath": "images/toppings/pepperoni.png"
+  },
+  {
+    "id": "mushroom",
+    "name": "Mushroom",
+    "price": 75,
+    "requiredLevel": 3,
+    "initialStatus": "LOCKED",
+    "assetPath": "images/toppings/mushroom.png"
+  },
+  {
+    "id": "onion",
+    "name": "Onion",
+    "price": 100,
+    "requiredLevel": 4,
+    "initialStatus": "LOCKED",
+    "assetPath": "images/toppings/onion.png"
+  },
+  {
+    "id": "bell_pepper",
+    "name": "Bell Pepper",
+    "price": 130,
+    "requiredLevel": 5,
+    "initialStatus": "LOCKED",
+    "assetPath": "images/toppings/bell_pepper.png"
+  },
+  {
+    "id": "sausage",
+    "name": "Sausage",
+    "price": 160,
+    "requiredLevel": 6,
+    "initialStatus": "LOCKED",
+    "assetPath": "images/toppings/sausage.png"
+  }
+]

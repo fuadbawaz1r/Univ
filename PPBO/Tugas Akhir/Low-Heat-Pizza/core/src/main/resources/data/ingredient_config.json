@@ -1,0 +1,70 @@
+{
+  "ingredients": [
+    {
+      "id": "cheese",
+      "displayName": "Cheese",
+      "type": "topping",
+      "unlockLevel": 1,
+      "price": 0,
+      "ownedByDefault": true,
+      "stationAsset": "images/kitchen/station_cheese.png",
+      "lockedAsset": "images/kitchen/station_cheese.png",
+      "toppingAsset": "images/kitchen/cheese_layer.png"
+    },
+    {
+      "id": "pepperoni",
+      "displayName": "Pepperoni",
+      "type": "topping",
+      "unlockLevel": 2,
+      "price": 25,
+      "ownedByDefault": false,
+      "stationAsset": "images/kitchen/station_pepperoni.png",
+      "lockedAsset": "images/kitchen/station_pepperoni.png",
+      "toppingAsset": "images/toppings/pepperoni.png"
+    },
+    {
+      "id": "mushroom",
+      "displayName": "Mushroom",
+      "type": "topping",
+      "unlockLevel": 3,
+      "price": 35,
+      "ownedByDefault": false,
+      "stationAsset": "images/kitchen/station_mushroom_locked.png",
+      "lockedAsset": "images/kitchen/station_mushroom_locked.png",
+      "toppingAsset": "images/toppings/mushroom.png"
+    },
+    {
+      "id": "onion",
+      "displayName": "Onion",
+      "type": "topping",
+      "unlockLevel": 4,
+      "price": 40,
+      "ownedByDefault": false,
+      "stationAsset": "images/kitchen/station_onion_locked.png",
+      "lockedAsset": "images/kitchen/station_onion_locked.png",
+      "toppingAsset": "images/toppings/onion.png"
+    },
+    {
+      "id": "basil",
+      "displayName": "Basil",
+      "type": "topping",
+      "unlockLevel": 5,
+      "price": 50,
+      "ownedByDefault": false,
+      "stationAsset": "images/kitchen/padlock.png",
+      "lockedAsset": "images/kitchen/padlock.png",
+      "toppingAsset": "images/toppings/bell_pepper.png"
+    },
+    {
+      "id": "fish",
+      "displayName": "Fish",
+      "type": "topping",
+      "unlockLevel": 6,
+      "price": 60,
+      "ownedByDefault": false,
+      "stationAsset": "images/kitchen/station_fish_locked.png",
+      "lockedAsset": "images/kitchen/station_fish_locked.png",
+      "toppingAsset": "images/toppings/sausage.png"
+    }
+  ]
+}

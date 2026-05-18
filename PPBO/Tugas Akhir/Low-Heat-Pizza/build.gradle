@@ -1,0 +1,47 @@
+allprojects {
+    apply plugin: 'eclipse'
+
+    repositories {
+        mavenCentral()
+    }
+}
+
+ext {
+    gdxVersion = '1.13.5'
+}
+
+subprojects {
+    apply plugin: 'java'
+
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(17)
+        }
+    }
+
+    tasks.withType(JavaCompile).configureEach {
+        options.encoding = 'UTF-8'
+    }
+}
+
+project(':core') {
+    dependencies {
+        implementation "com.badlogicgames.gdx:gdx:$gdxVersion"
+        implementation "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
+    }
+}
+
+project(':lwjgl3') {
+    apply plugin: 'application'
+
+    dependencies {
+        implementation project(':core')
+        implementation "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
+        runtimeOnly "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+        runtimeOnly "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
+    }
+
+    application {
+        mainClass = 'com.lowheatpizza.lwjgl3.LowHeatLauncher'
+    }
+}

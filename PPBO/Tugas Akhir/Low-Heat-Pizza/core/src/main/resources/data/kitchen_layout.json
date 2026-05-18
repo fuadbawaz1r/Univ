@@ -1,0 +1,39 @@
+{
+  "virtualWidth": 1920,
+  "virtualHeight": 1080,
+  "backgroundClean": "images/kitchen/bg_kitchen_clean.png",
+  "backgroundNumbered": "images/kitchen/bg_kitchen_numbered.png",
+  "debug": false,
+  "slots": [
+    { "id": "slot_1", "number": 1, "x": 335, "y": 663, "width": 210, "height": 180, "drawMode": "contain" },
+    { "id": "slot_2", "number": 2, "x": 565, "y": 663, "width": 210, "height": 180, "drawMode": "contain" },
+    { "id": "slot_3", "number": 3, "x": 795, "y": 663, "width": 210, "height": 180, "drawMode": "contain" },
+    { "id": "slot_4", "number": 4, "x": 1025, "y": 663, "width": 210, "height": 180, "drawMode": "contain" },
+    { "id": "slot_5", "number": 5, "x": 1255, "y": 663, "width": 210, "height": 180, "drawMode": "contain" },
+    { "id": "slot_7", "number": 7, "x": 330, "y": 240, "width": 270, "height": 390, "drawMode": "contain" },
+    { "id": "slot_8", "number": 8, "x": 1485, "y": 663, "width": 210, "height": 180, "drawMode": "contain" },
+    { "id": "slot_10", "number": 10, "x": 723, "y": 295, "width": 495, "height": 445, "drawMode": "contain" },
+    { "id": "slot_11", "number": 11, "x": 1240, "y": 295, "width": 470, "height": 445, "drawMode": "contain" }
+  ],
+  "stations": [
+    { "id": "sauce", "type": "sauce", "slot": 1, "asset": "images/kitchen/station_sauce.png", "unlocked": true },
+    { "id": "cheese", "type": "cheese", "slot": 2, "asset": "images/kitchen/station_cheese.png", "unlocked": true },
+    { "id": "pepperoni", "type": "pepperoni", "slot": 3, "asset": "images/kitchen/station_pepperoni.png", "unlocked": true },
+    { "id": "mushroom", "type": "mushroom", "slot": 4, "asset": "images/kitchen/station_mushroom_locked.png", "unlocked": true },
+    { "id": "onion", "type": "onion", "slot": 5, "asset": "images/kitchen/station_onion_locked.png", "unlocked": true },
+    { "id": "dough", "type": "dough", "slot": 7, "asset": "images/kitchen/station_dough.png", "unlocked": true },
+    { "id": "fish", "type": "fish", "slot": 8, "asset": "images/kitchen/station_fish_locked.png", "unlocked": true }
+  ],
+  "prepAreas": [
+    { "id": "main_prep", "slot": 10 },
+    { "id": "secondary_prep", "slot": 11 }
+  ],
+  "pepperoniPositions": [
+    { "x": -90, "y": 40 },
+    { "x": 0, "y": 70 },
+    { "x": 90, "y": 40 },
+    { "x": -60, "y": -40 },
+    { "x": 60, "y": -40 },
+    { "x": 0, "y": 0 }
+  ]
+}
